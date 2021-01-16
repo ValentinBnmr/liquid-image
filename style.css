@@ -1,0 +1,78 @@
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+.landing {
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+.distorsion {
+    height: 600px;
+    width: 400px;
+    align-self: center;
+    animation: 1.2s distorsion-entrance;
+
+}
+
+
+.intro {
+    align-self: center;
+    width: 50%;
+    animation: 800ms ease-in-out text-entrance;
+}
+.intro h2 {
+    font-size: 50px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: #10121d;
+    
+    
+}
+
+.intro p {
+    font-size: 25px;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #10121d
+}
+
+.round {
+    position: absolute;
+    bottom: -200px;
+    right: -200px;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: rgb(207, 255, 162);
+}
+
+@keyframes text-entrance {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes distorsion-entrance {
+    0% {
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
